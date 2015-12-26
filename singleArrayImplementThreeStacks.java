@@ -54,7 +54,10 @@ public class singleArrayImplementThreeStacks {
 	}
 	
 	boolean isEmpty(int stackNum){
-		return true;
+		if(stackPointer[stackNum] == -1) {
+			return true;
+		}
+		return false;
 	}
 	
 
