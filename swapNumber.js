@@ -8,11 +8,10 @@
 function swapNumber(numberA, numberB) {
 	var a = Number(numberA);
 	var b = Number(numberB);
-	var diff = Math.abs(a + b);
-	console.log('diff: ', diff);
+	var sum = Math.abs(a + b);
 
 	b = a;
- 	a = diff - b;
+ 	a = sum - b;
 	console.log(a);				
 	console.log(b);				
 	
