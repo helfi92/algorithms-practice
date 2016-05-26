@@ -6,11 +6,15 @@
 */
 
 function swapNumber(numberA, numberB) {
-	
-	first = Number(numberB.substring(0, numberB.length));
-	second = Number( numberA.substring(0, numberA.length));
-	console.log('a: ', first);
-	console.log('b: ', second);
+	var a = Number(numberA);
+	var b = Number(numberB);
+	var diff = Math.abs(a + b);
+	console.log('diff: ', diff);
 
+	b = a;
+ 	a = diff - b;
+	console.log(a);				
+	console.log(b);				
+	
 }
 swapNumber(process.argv[2], process.argv[3]);
