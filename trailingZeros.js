@@ -7,25 +7,13 @@
 */
 
 function getTrailingZeros(n) {
-	var counter = 0,
-	    number;
-	
-	number = computeFactorial(n);	
-	while(number % 10 == 0 && number > 0) {
-		counter++;
-		number /= 10;
+	//	Divide by 5
+	var trailingZeros = 0;
+	while(n >= 5) {
+		trailingZeros = trailingZeros + parseInt(n / 5, 10);
+		n /= 5;
 	}
-	console.log('There are: ' + counter + ' trailing zeros');	
-	return counter;
-
+	return trailingZeros;
 }
 
-function computeFactorial(n) {
-	var number = n;
-	while (n != 1 && n > 0) {
-		number = number * (n - 1);
-		n--;
-	}
-	return number;
-}
-getTrailingZeros(process.argv[2]);
+console.log(getTrailingZeros(process.argv[2]));
