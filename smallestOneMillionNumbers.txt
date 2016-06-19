@@ -1,0 +1,9 @@
+/*
+
+
+	Describe an algorithm to find the smallest one million numbers in one billion
+	numbers. Assume that the computer memory can hold all one billion numbers
+
+*/
+
+The way I would do it is sort the numbers using quicksort O(nlogn) then return the first million number with O(1). Total speed complexity is therefore  O(nlogn)
